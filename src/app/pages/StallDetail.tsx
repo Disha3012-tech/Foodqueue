@@ -61,7 +61,7 @@ export const StallDetail: React.FC = () => {
           <div className="absolute bottom-0 left-0 right-0 p-8">
             <div className="flex items-end justify-between">
               <div>
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full text-sm font-semibold text-white mb-3">
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full text-sm font-semibold text-white mb-3">
                   {stall.category}
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-2">{stall.name}</h1>
@@ -92,7 +92,7 @@ export const StallDetail: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-200 dark:border-purple-500/20 hover:border-orange-300 dark:hover:border-purple-500/50 transition-all"
+                className="bg-gray-50 dark:bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-200 dark:border-purple-500/20 hover:border-blue-300 dark:hover:border-cyan-500/50 transition-all"
               >
                 <div className="flex gap-4 p-4">
                   <img
@@ -104,14 +104,14 @@ export const StallDetail: React.FC = () => {
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">{item.name}</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">{item.description}</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                      <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                         ₹{item.price.toFixed(2)}
                       </span>
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => handleAddToCart(item)}
-                        className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-orange-500/50 transition-all"
+                        className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-blue-500/50 transition-all"
                       >
                         <Plus className="w-4 h-4" />
                         Add to Cart

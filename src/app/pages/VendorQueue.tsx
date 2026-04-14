@@ -45,7 +45,7 @@ const QueueItem: React.FC<QueueItemProps> = ({ order, index, moveItem }) => {
         <GripVertical className="w-5 h-5 text-gray-500" />
 
         {/* Position Number */}
-        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white font-bold">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white font-bold">
           {index + 1}
         </div>
 
@@ -154,9 +154,9 @@ export const VendorQueue: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="bg-gradient-to-br from-orange-500/20 to-red-500/20 backdrop-blur-sm rounded-xl p-6 border border-orange-500/30"
+              className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30"
             >
-              <Clock className="w-8 h-8 text-orange-400 mb-3" />
+              <Clock className="w-8 h-8 text-green-400 mb-3" />
               <p className="text-gray-400 text-sm mb-1">Avg Wait Time</p>
               <p className="text-3xl font-bold text-white">
                 {queueOrders.length > 0 ? Math.round(totalWaitTime / queueOrders.length) : 0} min
@@ -181,7 +181,7 @@ export const VendorQueue: React.FC = () => {
                     transition={{ delay: i * 0.05 }}
                     className="flex-shrink-0"
                   >
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white text-sm font-bold">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white text-sm font-bold">
                       {order.token}
                     </div>
                   </motion.div>

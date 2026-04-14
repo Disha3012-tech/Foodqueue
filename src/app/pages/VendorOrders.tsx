@@ -66,7 +66,7 @@ export const VendorOrders: React.FC = () => {
               onClick={() => setFilter(status as any)}
               className={`px-6 py-2 rounded-full font-semibold transition-all whitespace-nowrap ${
                 filter === status
-                  ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg'
                   : 'bg-gray-800/50 text-gray-400 hover:text-white border border-purple-500/20'
               }`}
             >
@@ -102,7 +102,7 @@ export const VendorOrders: React.FC = () => {
                   {/* Order Header */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white font-bold">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white font-bold">
                         {order.token}
                       </div>
                       <div>
@@ -155,7 +155,7 @@ export const VendorOrders: React.FC = () => {
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => handleStatusChange(order.id, nextStatus as any)}
-                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-orange-500/50 transition-all"
+                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-green-500/50 transition-all"
                       >
                         {nextStatus === 'preparing' && <ChefHat className="w-4 h-4" />}
                         {nextStatus === 'ready' && <Package className="w-4 h-4" />}

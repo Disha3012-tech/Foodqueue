@@ -59,8 +59,8 @@ export const Auth: React.FC = () => {
         transition={{ duration: 0.6 }}
         className={`hidden lg:flex lg:w-1/2 ${
           selectedMode === 'customer'
-            ? 'bg-gradient-to-br from-orange-600 via-red-600 to-purple-700'
-            : 'bg-gradient-to-br from-blue-600 via-cyan-600 to-indigo-700'
+            ? 'bg-gradient-to-br from-blue-600 via-cyan-600 to-indigo-700'
+            : 'bg-gradient-to-br from-green-600 via-emerald-600 to-teal-700'
         } relative overflow-hidden`}
       >
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1763619814380-1637cdf5f796?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZW9wbGUlMjB3YWl0aW5nJTIwcXVldWUlMjBsaW5lfGVufDF8fHx8MTc3NTMyNzk0NHww&ixlib=rb-4.1.0&q=80&w=1080')] bg-cover bg-center opacity-20" />
@@ -116,15 +116,15 @@ export const Auth: React.FC = () => {
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-2xl ${
               selectedMode === 'customer'
-                ? 'bg-gradient-to-br from-orange-500 to-red-500'
-                : 'bg-gradient-to-br from-blue-500 to-cyan-500'
+                ? 'bg-gradient-to-br from-blue-500 to-cyan-500'
+                : 'bg-gradient-to-br from-green-500 to-emerald-500'
             }`}>
               Q
             </div>
             <span className={`text-3xl font-bold bg-gradient-to-r bg-clip-text text-transparent ${
               selectedMode === 'customer'
-                ? 'from-orange-400 to-red-400'
-                : 'from-blue-400 to-cyan-400'
+                ? 'from-blue-400 to-cyan-400'
+                : 'from-green-400 to-emerald-400'
             }`}>
               QueueSkip
             </span>
@@ -137,8 +137,8 @@ export const Auth: React.FC = () => {
               className={`flex-1 py-3 rounded-md font-semibold transition-all ${
                 isLogin
                   ? selectedMode === 'customer'
-                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
-                    : 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
+                    : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg'
                   : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
               }`}
             >
@@ -149,8 +149,8 @@ export const Auth: React.FC = () => {
               className={`flex-1 py-3 rounded-md font-semibold transition-all ${
                 !isLogin
                   ? selectedMode === 'customer'
-                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
-                    : 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
+                    : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg'
                   : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
               }`}
             >
@@ -185,8 +185,8 @@ export const Auth: React.FC = () => {
                     required={!isLogin}
                     className={`w-full pl-12 pr-4 py-4 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-purple-500/30 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none transition-all ${
                       selectedMode === 'customer'
-                        ? 'focus:border-orange-500 dark:focus:border-purple-500 focus:ring-2 focus:ring-orange-500/20 dark:focus:ring-purple-500/20'
-                        : 'focus:border-blue-500 dark:focus:border-cyan-500 focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-cyan-500/20'
+                        ? 'focus:border-blue-500 dark:focus:border-cyan-500 focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-cyan-500/20'
+                        : 'focus:border-green-500 dark:focus:border-emerald-500 focus:ring-2 focus:ring-green-500/20 dark:focus:ring-emerald-500/20'
                     }`}
                   />
                 </motion.div>
@@ -203,8 +203,8 @@ export const Auth: React.FC = () => {
                 required
                 className={`w-full pl-12 pr-4 py-4 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-purple-500/30 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none transition-all ${
                   selectedMode === 'customer'
-                    ? 'focus:border-orange-500 dark:focus:border-purple-500 focus:ring-2 focus:ring-orange-500/20 dark:focus:ring-purple-500/20'
-                    : 'focus:border-blue-500 dark:focus:border-cyan-500 focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-cyan-500/20'
+                    ? 'focus:border-blue-500 dark:focus:border-cyan-500 focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-cyan-500/20'
+                    : 'focus:border-green-500 dark:focus:border-emerald-500 focus:ring-2 focus:ring-green-500/20 dark:focus:ring-emerald-500/20'
                 }`}
               />
             </div>
@@ -219,8 +219,8 @@ export const Auth: React.FC = () => {
                 required
                 className={`w-full pl-12 pr-4 py-4 bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-purple-500/30 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none transition-all ${
                   selectedMode === 'customer'
-                    ? 'focus:border-orange-500 dark:focus:border-purple-500 focus:ring-2 focus:ring-orange-500/20 dark:focus:ring-purple-500/20'
-                    : 'focus:border-blue-500 dark:focus:border-cyan-500 focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-cyan-500/20'
+                    ? 'focus:border-blue-500 dark:focus:border-cyan-500 focus:ring-2 focus:ring-blue-500/20 dark:focus:ring-cyan-500/20'
+                    : 'focus:border-green-500 dark:focus:border-emerald-500 focus:ring-2 focus:ring-green-500/20 dark:focus:ring-emerald-500/20'
                 }`}
               />
             </div>
@@ -230,14 +230,14 @@ export const Auth: React.FC = () => {
               whileHover={{
                 scale: 1.02,
                 boxShadow: selectedMode === 'customer'
-                  ? '0 0 30px rgba(249, 115, 22, 0.5)'
-                  : '0 0 30px rgba(59, 130, 246, 0.5)'
+                  ? '0 0 30px rgba(59, 130, 246, 0.5)'
+                  : '0 0 30px rgba(34, 197, 94, 0.5)'
               }}
               whileTap={{ scale: 0.98 }}
               className={`w-full py-4 text-white font-bold rounded-lg shadow-lg transition-all ${
                 selectedMode === 'customer'
-                  ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:shadow-orange-500/50'
-                  : 'bg-gradient-to-r from-blue-500 to-cyan-500 hover:shadow-blue-500/50'
+                  ? 'bg-gradient-to-r from-blue-500 to-cyan-500 hover:shadow-blue-500/50'
+                  : 'bg-gradient-to-r from-green-500 to-emerald-500 hover:shadow-green-500/50'
               }`}
             >
               {isLogin ? 'Login' : 'Get Started'}
@@ -255,8 +255,8 @@ export const Auth: React.FC = () => {
               onClick={() => setIsLogin(!isLogin)}
               className={`font-semibold ${
                 selectedMode === 'customer'
-                  ? 'text-orange-500 hover:text-orange-400'
-                  : 'text-blue-500 hover:text-blue-400'
+                  ? 'text-blue-500 hover:text-blue-400'
+                  : 'text-green-500 hover:text-green-400'
               }`}
             >
               {isLogin ? 'Register' : 'Login'}

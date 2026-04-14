@@ -19,7 +19,7 @@ export const FoodCard: React.FC<FoodCardProps> = ({ stall, index }) => {
       className="group relative"
     >
       <Link to={`/stall/${stall.id}`}>
-        <div className="relative bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200 dark:border-purple-500/20 hover:border-orange-300 dark:hover:border-purple-500/50 transition-all duration-300 shadow-sm hover:shadow-lg dark:shadow-none">
+        <div className="relative bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200 dark:border-purple-500/20 hover:border-blue-300 dark:hover:border-cyan-500/50 transition-all duration-300 shadow-sm hover:shadow-lg dark:shadow-none">
           {/* Image */}
           <div className="relative h-48 overflow-hidden">
             <motion.img
@@ -32,7 +32,7 @@ export const FoodCard: React.FC<FoodCardProps> = ({ stall, index }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-white/50 dark:via-gray-900/50 to-transparent" />
             
             {/* Category Badge */}
-            <div className="absolute top-3 right-3 px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full text-xs font-semibold text-white">
+            <div className="absolute top-3 right-3 px-3 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full text-xs font-semibold text-white">
               {stall.category}
             </div>
           </div>
@@ -40,7 +40,7 @@ export const FoodCard: React.FC<FoodCardProps> = ({ stall, index }) => {
           {/* Content */}
           <div className="p-5 space-y-3">
             <div className="flex items-start justify-between">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">
                 {stall.name}
               </h3>
               <div className="flex items-center gap-1">
@@ -55,7 +55,7 @@ export const FoodCard: React.FC<FoodCardProps> = ({ stall, index }) => {
                 <Users className="w-4 h-4" />
                 <span>{stall.queueLength} in queue</span>
               </div>
-              <div className="flex items-center gap-2 text-orange-500 dark:text-purple-400">
+              <div className="flex items-center gap-2 text-blue-500 dark:text-cyan-400">
                 <Clock className="w-4 h-4" />
                 <span>{stall.estimatedWait} mins</span>
               </div>
@@ -69,7 +69,7 @@ export const FoodCard: React.FC<FoodCardProps> = ({ stall, index }) => {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: i * 0.05 }}
-                  className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-red-500"
+                  className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"
                 />
               ))}
               {stall.queueLength > 10 && (
@@ -82,7 +82,7 @@ export const FoodCard: React.FC<FoodCardProps> = ({ stall, index }) => {
           <motion.div
             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
             style={{
-              background: 'radial-gradient(circle at center, rgba(249, 115, 22, 0.1), transparent 70%)',
+              background: 'radial-gradient(circle at center, rgba(59, 130, 246, 0.1), transparent 70%)',
             }}
           />
         </div>

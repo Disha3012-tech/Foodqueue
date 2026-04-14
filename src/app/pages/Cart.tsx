@@ -76,7 +76,7 @@ export const Cart: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => navigate('/')}
-              className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg"
+              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg"
             >
               Browse Stalls
             </motion.button>
@@ -120,7 +120,7 @@ export const Cart: React.FC = () => {
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                           onClick={() => updateQuantity(item.id, 1)}
-                          className="w-8 h-8 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white"
+                          className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white"
                         >
                           <Plus className="w-4 h-4" />
                         </motion.button>
@@ -128,7 +128,7 @@ export const Cart: React.FC = () => {
 
                       {/* Price */}
                       <div className="text-right min-w-[80px]">
-                        <p className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                        <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                           ₹{(item.price * item.quantity).toFixed(2)}
                         </p>
                       </div>
@@ -153,7 +153,7 @@ export const Cart: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-gray-800/80 dark:to-purple-900/20 backdrop-blur-sm rounded-xl p-6 border border-orange-200 dark:border-purple-500/30"
+              className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-800/80 dark:to-indigo-900/20 backdrop-blur-sm rounded-xl p-6 border border-blue-200 dark:border-indigo-500/30"
             >
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between text-gray-700 dark:text-gray-300">
@@ -164,17 +164,17 @@ export const Cart: React.FC = () => {
                   <span>Service Fee</span>
                   <span>₹0.00</span>
                 </div>
-                <div className="border-t border-orange-200 dark:border-purple-500/30 pt-3">
+                <div className="border-t border-blue-200 dark:border-indigo-500/30 pt-3">
                   <div className="flex justify-between items-center">
                     <span className="text-xl font-semibold text-gray-900 dark:text-white">Total</span>
-                    <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                    <span className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                       ₹{total.toFixed(2)}
                     </span>
                   </div>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600 dark:text-gray-400">Estimated pickup time</span>
-                  <span className="text-orange-500 dark:text-purple-300 font-semibold">{estimatedTime} mins</span>
+                  <span className="text-blue-500 dark:text-cyan-300 font-semibold">{estimatedTime} mins</span>
                 </div>
               </div>
 
@@ -182,7 +182,7 @@ export const Cart: React.FC = () => {
                 whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(249, 115, 22, 0.5)' }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleCheckout}
-                className="w-full py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2"
+                className="w-full py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2"
               >
                 Checkout
                 <ArrowRight className="w-5 h-5" />

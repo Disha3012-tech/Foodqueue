@@ -41,7 +41,7 @@ export const Profile: React.FC = () => {
       icon: Package,
       label: 'Total Orders',
       value: userOrders.length,
-      color: 'from-orange-500 to-red-500',
+      color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: IndianRupee,
@@ -96,8 +96,8 @@ export const Profile: React.FC = () => {
           transition={{ delay: 0.1 }}
           className={`bg-gradient-to-br ${
             userMode === 'customer'
-              ? 'from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border-orange-200 dark:border-orange-500/30'
-              : 'from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border-blue-200 dark:border-blue-500/30'
+              ? 'from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border-green-200 dark:border-green-500/30'
+              : 'from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border-green-200 dark:border-green-500/30'
           } backdrop-blur-sm rounded-xl p-8 border mb-8`}
         >
           <div className="flex items-start justify-between">
@@ -105,7 +105,7 @@ export const Profile: React.FC = () => {
               <motion.div
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 className={`w-24 h-24 rounded-full bg-gradient-to-r ${
-                  userMode === 'customer' ? 'from-orange-500 to-red-500' : 'from-blue-500 to-cyan-500'
+                  userMode === 'customer' ? 'from-blue-500 to-cyan-500' : 'from-blue-500 to-cyan-500'
                 } flex items-center justify-center text-white text-4xl font-bold shadow-lg`}
               >
                 {user.name.charAt(0).toUpperCase()}
@@ -118,8 +118,8 @@ export const Profile: React.FC = () => {
                 </div>
                 <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold ${
                   userMode === 'customer'
-                    ? 'bg-orange-500/20 text-orange-600 dark:text-orange-400'
-                    : 'bg-blue-500/20 text-blue-600 dark:text-blue-400'
+                    ? 'bg-green-500/20 text-green-600 dark:text-green-400'
+                    : 'bg-green-500/20 text-green-600 dark:text-green-400'
                 }`}>
                   <User className="w-4 h-4" />
                   {userMode === 'customer' ? 'Customer' : 'Vendor'}
@@ -173,7 +173,7 @@ export const Profile: React.FC = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${
-                  userMode === 'customer' ? 'from-orange-500 to-red-500' : 'from-blue-500 to-cyan-500'
+                  userMode === 'customer' ? 'from-blue-500 to-cyan-500' : 'from-blue-500 to-cyan-500'
                 } flex items-center justify-center text-white font-bold`}>
                   {lastOrder.token}
                 </div>
@@ -190,7 +190,7 @@ export const Profile: React.FC = () => {
                 <span
                   className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
                     lastOrder.status === 'placed'
-                      ? 'bg-blue-500/20 text-blue-600 dark:text-blue-400'
+                      ? 'bg-green-500/20 text-green-600 dark:text-green-400'
                       : lastOrder.status === 'preparing'
                       ? 'bg-yellow-500/20 text-yellow-600 dark:text-yellow-400'
                       : lastOrder.status === 'ready'
@@ -227,7 +227,7 @@ export const Profile: React.FC = () => {
                 >
                   <div className="flex items-center gap-3">
                     <div className={`w-8 h-8 rounded-full bg-gradient-to-r ${
-                      userMode === 'customer' ? 'from-orange-500 to-red-500' : 'from-blue-500 to-cyan-500'
+                      userMode === 'customer' ? 'from-blue-500 to-cyan-500' : 'from-blue-500 to-cyan-500'
                     } flex items-center justify-center text-white text-xs font-bold`}>
                       {order.token}
                     </div>

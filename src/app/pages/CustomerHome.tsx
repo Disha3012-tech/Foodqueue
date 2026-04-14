@@ -37,7 +37,7 @@ export const CustomerHome: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="text-5xl md:text-6xl font-bold mb-4"
           >
-            <span className="bg-gradient-to-r from-orange-400 via-red-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
               Skip the Line Today
             </span>
             <span className="ml-3">🍔</span>
@@ -87,7 +87,7 @@ export const CustomerHome: React.FC = () => {
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full font-semibold transition-all whitespace-nowrap ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
                   : 'bg-gray-100 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white border border-gray-200 dark:border-purple-500/20'
               }`}
             >
@@ -113,10 +113,10 @@ export const CustomerHome: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     whileHover={{ y: -4, scale: 1.02 }}
-                    className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-gray-800/50 dark:to-purple-900/20 backdrop-blur-sm rounded-xl p-4 border border-orange-200 dark:border-purple-500/30 cursor-pointer"
+                    className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-800/50 dark:to-indigo-900/20 backdrop-blur-sm rounded-xl p-4 border border-blue-200 dark:border-indigo-500/30 cursor-pointer"
                   >
                     <div className="flex items-center justify-between mb-3">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white font-bold">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold">
                         {order.token}
                       </div>
                       <span
@@ -144,7 +144,7 @@ export const CustomerHome: React.FC = () => {
                         <span>{order.estimatedTime}m</span>
                       </div>
                     </div>
-                    <div className="mt-2 text-xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                    <div className="mt-2 text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                       ₹{order.total.toFixed(2)}
                     </div>
                   </motion.div>

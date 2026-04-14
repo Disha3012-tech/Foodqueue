@@ -38,7 +38,7 @@ export const VendorDashboard: React.FC = () => {
       icon: Clock,
       label: 'Avg Wait Time',
       value: `${avgWaitTime} min`,
-      color: 'from-orange-500 to-red-500',
+      color: 'from-green-500 to-emerald-500',
     },
   ];
 
@@ -89,10 +89,10 @@ export const VendorDashboard: React.FC = () => {
         >
           <Link to="/vendor/orders">
             <motion.div
-              whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(249, 115, 22, 0.3)' }}
-              className="bg-gradient-to-br from-orange-500/20 to-red-500/20 backdrop-blur-sm rounded-xl p-6 border border-orange-300 dark:border-orange-500/30 cursor-pointer"
+              whileHover={{ scale: 1.02, boxShadow: '0 0 30px rgba(34, 197, 94, 0.3)' }}
+              className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-xl p-6 border border-green-300 dark:border-green-500/30 cursor-pointer"
             >
-              <Package className="w-8 h-8 text-orange-600 dark:text-orange-400 mb-3" />
+              <Package className="w-8 h-8 text-green-600 dark:text-green-400 mb-3" />
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Manage Orders</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">View and update order status</p>
             </motion.div>
@@ -148,7 +148,7 @@ export const VendorDashboard: React.FC = () => {
                       className="flex-shrink-0 text-center"
                     >
                       <div className="relative mb-2">
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                        <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
                           {order.token}
                         </div>
                         <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-xs font-bold">
@@ -200,7 +200,7 @@ export const VendorDashboard: React.FC = () => {
                   className="flex items-center justify-between p-4 bg-white dark:bg-gray-900/50 rounded-lg border border-gray-200 dark:border-gray-700/50"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white font-bold">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white font-bold">
                       {order.token}
                     </div>
                     <div>

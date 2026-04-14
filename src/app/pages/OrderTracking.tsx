@@ -77,7 +77,7 @@ export const OrderTracking: React.FC = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: 'spring', delay: 0.2 }}
-            className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white text-3xl font-bold"
+            className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-3xl font-bold"
           >
             {order.token}
           </motion.div>
@@ -102,7 +102,7 @@ export const OrderTracking: React.FC = () => {
               initial={{ width: 0 }}
               animate={{ width: `₹{progress}%` }}
               transition={{ duration: 1, ease: 'easeOut' }}
-              className="h-full bg-gradient-to-r from-orange-500 to-red-500"
+              className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
             />
           </div>
         </motion.div>
@@ -135,7 +135,7 @@ export const OrderTracking: React.FC = () => {
                     }}
                     className={`w-16 h-16 rounded-full flex items-center justify-center border-4 transition-all ₹{
                       isActive
-                        ? 'bg-gradient-to-r from-orange-500 to-red-500 border-orange-400 shadow-lg shadow-orange-500/50'
+                        ? 'bg-gradient-to-r from-blue-500 to-cyan-500 border-blue-400 shadow-lg shadow-blue-500/50'
                         : 'bg-gray-200 dark:bg-gray-700 border-gray-300 dark:border-gray-600'
                     }`}
                   >
@@ -196,7 +196,7 @@ export const OrderTracking: React.FC = () => {
             ))}
             <div className="border-t border-gray-200 dark:border-gray-700 pt-3 flex justify-between">
               <span className="font-semibold text-gray-900 dark:text-white">Total</span>
-              <span className="text-xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 ₹{order.total.toFixed(2)}
               </span>
             </div>
@@ -229,7 +229,7 @@ export const OrderTracking: React.FC = () => {
                 <motion.p
                   animate={{ scale: [1, 1.05, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent"
+                  className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
                 >
                   {order.estimatedTime}m
                 </motion.p>

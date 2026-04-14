@@ -266,16 +266,16 @@ export const VendorAnalytics: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="mt-6 bg-gradient-to-r from-orange-500/10 to-red-500/10 backdrop-blur-sm rounded-xl p-6 border border-orange-500/30"
+          className="mt-6 bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-xl p-6 border border-green-500/30"
         >
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center flex-shrink-0">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">
               <TrendingUp className="w-6 h-6 text-white" />
             </div>
             <div>
               <h3 className="text-xl font-semibold text-white mb-2">Peak Hours Insight</h3>
               <p className="text-gray-300">
-                Your busiest hours are between <span className="text-orange-400 font-semibold">12PM - 2PM</span>.
+                Your busiest hours are between <span className="text-green-400 font-semibold">12PM - 2PM</span>.
                 Consider adding extra staff during this time to reduce wait times and improve customer satisfaction.
               </p>
             </div>
