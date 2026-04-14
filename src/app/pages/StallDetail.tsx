@@ -105,7 +105,7 @@ export const StallDetail: React.FC = () => {
                     <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">{item.description}</p>
                     <div className="flex items-center justify-between">
                       <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-                        ${item.price.toFixed(2)}
+                        ₹{item.price.toFixed(2)}
                       </span>
                       <motion.button
                         whileHover={{ scale: 1.05 }}

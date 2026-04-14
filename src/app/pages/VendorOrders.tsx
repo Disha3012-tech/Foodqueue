@@ -6,11 +6,13 @@ import { useNavigate } from 'react-router';
 import { toast } from 'sonner';
 
 export const VendorOrders: React.FC = () => {
-  const { orders, updateOrderStatus } = useApp();
+  const { orders, updateOrderStatus, user } = useApp();
   const navigate = useNavigate();
   const [filter, setFilter] = useState<'all' | 'placed' | 'preparing' | 'ready'>('all');
 
-  const filteredOrders = filter === 'all' ? orders : orders.filter((o) => o.status === filter);
+  // Filter orders for this vendor's stall only
+  const vendorOrders = orders.filter((o) => o.stallId === user?.stallId);
+  const filteredOrders = filter === 'all' ? vendorOrders : vendorOrders.filter((o) => o.status === filter);
 
   const handleStatusChange = (orderId: string, newStatus: 'placed' | 'preparing' | 'ready' | 'completed') => {
     updateOrderStatus(orderId, newStatus);
@@ -112,7 +114,7 @@ export const VendorOrders: React.FC = () => {
                     </div>
                     <div className="text-right">
                       <p className="text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                        ${order.total.toFixed(2)}
+                        ₹{order.total.toFixed(2)}
                       </p>
                     </div>
                   </div>
@@ -124,7 +126,7 @@ export const VendorOrders: React.FC = () => {
                         <span className="text-gray-300">
                           {item.quantity}x {item.name}
                         </span>
-                        <span className="text-gray-400">${(item.price * item.quantity).toFixed(2)}</span>
+                        <span className="text-gray-400">₹{(item.price * item.quantity).toFixed(2)}</span>
                       </div>
                     ))}
                   </div>

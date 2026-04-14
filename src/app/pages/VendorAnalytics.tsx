@@ -42,7 +42,7 @@ export const VendorAnalytics: React.FC = () => {
     {
       icon: DollarSign,
       label: 'Total Revenue',
-      value: '$4,250',
+      value: '₹24,250',
       change: '+12.5%',
       positive: true,
     },

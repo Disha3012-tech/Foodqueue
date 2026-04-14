@@ -7,6 +7,7 @@ export interface User {
   name: string;
   email: string;
   mode: UserMode;
+  stallId?: string; // For vendors - which stall they manage
 }
 
 interface CartItem {

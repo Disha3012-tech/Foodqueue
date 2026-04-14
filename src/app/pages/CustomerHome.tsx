@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Search, Filter } from 'lucide-react';
+import { Search, Filter, Clock, Package } from 'lucide-react';
 import { FoodCard } from '../components/FoodCard';
 import { mockStalls } from '../data/mockData';
+import { useApp } from '../context/AppContext';
+import { Link } from 'react-router';
 
 export const CustomerHome: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const { orders } = useApp();
 
   const categories = ['All', 'Burgers', 'Mexican', 'Pizza', 'Japanese'];
+
+  // Get recent orders (last 3)
+  const recentOrders = orders.slice(-3).reverse();
 
   const filteredStalls = mockStalls.filter((stall) => {
     const matchesSearch = stall.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -89,6 +95,64 @@ export const CustomerHome: React.FC = () => {
             </motion.button>
           ))}
         </motion.div>
+
+        {/* Recent Orders Section */}
+        {recentOrders.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="mb-8"
+          >
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Recent Orders</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {recentOrders.map((order, index) => (
+                <Link key={order.id} to={`/order/${order.id}`}>
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ y: -4, scale: 1.02 }}
+                    className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-gray-800/50 dark:to-purple-900/20 backdrop-blur-sm rounded-xl p-4 border border-orange-200 dark:border-purple-500/30 cursor-pointer"
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white font-bold">
+                        {order.token}
+                      </div>
+                      <span
+                        className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                          order.status === 'placed'
+                            ? 'bg-blue-500/20 text-blue-600 dark:text-blue-400'
+                            : order.status === 'preparing'
+                            ? 'bg-yellow-500/20 text-yellow-600 dark:text-yellow-400'
+                            : order.status === 'ready'
+                            ? 'bg-green-500/20 text-green-600 dark:text-green-400'
+                            : 'bg-purple-500/20 text-purple-600 dark:text-purple-400'
+                        }`}
+                      >
+                        {order.status}
+                      </span>
+                    </div>
+                    <p className="text-gray-900 dark:text-white font-semibold mb-1">{order.stallName}</p>
+                    <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400">
+                      <div className="flex items-center gap-1">
+                        <Package className="w-4 h-4" />
+                        <span>{order.items.length} items</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        <span>{order.estimatedTime}m</span>
+                      </div>
+                    </div>
+                    <div className="mt-2 text-xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                      ₹{order.total.toFixed(2)}
+                    </div>
+                  </motion.div>
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
 
         {/* Stalls Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -34,7 +34,7 @@ export const Cart: React.FC = () => {
     addOrder(order);
     clearCart();
     toast.success('Order placed successfully!');
-    navigate(`/order/${order.id}`);
+    navigate(`/order/₹{order.id}`);
   };
 
   const updateQuantity = (itemId: string, change: number) => {
@@ -129,7 +129,7 @@ export const Cart: React.FC = () => {
                       {/* Price */}
                       <div className="text-right min-w-[80px]">
                         <p className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-                          ${(item.price * item.quantity).toFixed(2)}
+                          ₹{(item.price * item.quantity).toFixed(2)}
                         </p>
                       </div>
 
@@ -158,17 +158,17 @@ export const Cart: React.FC = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between text-gray-700 dark:text-gray-300">
                   <span>Subtotal</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>₹{total.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-gray-700 dark:text-gray-300">
                   <span>Service Fee</span>
-                  <span>$0.00</span>
+                  <span>₹0.00</span>
                 </div>
                 <div className="border-t border-orange-200 dark:border-purple-500/30 pt-3">
                   <div className="flex justify-between items-center">
                     <span className="text-xl font-semibold text-gray-900 dark:text-white">Total</span>
                     <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-                      ${total.toFixed(2)}
+                      ₹{total.toFixed(2)}
                     </span>
                   </div>
                 </div>
